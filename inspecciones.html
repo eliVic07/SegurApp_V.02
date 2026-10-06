@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SegurApp - Inspecciones</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="CSS/inspecciones.css">
+</head>
+
+<body>
+
+    <aside class="barra-lateral d-none d-md-block">
+
+        <div class="contenedor-logo">
+            <img src="IMGS/logoSegurApp.png" alt="Logo SegurApp" class="logo">
+        </div>
+
+        <nav class="menu-lateral">
+
+            <a href="Dashboard.html" class="elemento-menu">
+                <i class="bi bi-grid-1x2"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="empleados.html" class="elemento-menu">
+                <i class="bi bi-people"></i>
+                <span>Empleados</span>
+            </a>
+
+            <a href="capacitaciones.html" class="elemento-menu">
+                <i class="bi bi-book"></i>
+                <span>Capacitaciones</span>
+            </a>
+
+            <a href="inspecciones.html" class="elemento-menu activo">
+                <i class="bi bi-clipboard-check"></i>
+                <span>Inspecciones</span>
+            </a>
+
+            <a href="incidentes.html" class="elemento-menu">
+                <i class="bi bi-exclamation-triangle"></i>
+                <span>Incidentes y Accidentes</span>
+            </a>
+
+            <a href="epp.html" class="elemento-menu">
+                <i class="bi bi-briefcase"></i>
+                <span>EPP</span>
+            </a>
+
+            <a href="riesgos.html" class="elemento-menu">
+                <i class="bi bi-shield-exclamation"></i>
+                <span>Riesgos</span>
+            </a>
+
+            <a href="documentos.html" class="elemento-menu">
+                <i class="bi bi-folder"></i>
+                <span>Documentos</span>
+            </a>
+
+            <a href="alertas.html" class="elemento-menu">
+                <i class="bi bi-bell"></i>
+                <span>Alertas</span>
+            </a>
+
+            <a href="reportes.html" class="elemento-menu">
+                <i class="bi bi-bar-chart"></i>
+                <span>Reportes</span>
+            </a>
+
+            <a href="configuracion.html" class="elemento-menu">
+                <i class="bi bi-gear"></i>
+                <span>Configuración</span>
+            </a>
+
+        </nav>
+
+        <div class="decoracion-lateral"></div>
+
+    </aside>
+
+
+    <div class="offcanvas offcanvas-start menu-movil" tabindex="-1" id="menuMovil">
+
+        <div class="offcanvas-header">
+
+            <img src="IMGS/logoSegurApp.png" class="logo-movil" alt="Logo SegurApp">
+
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Cerrar"></button>
+
+        </div>
+
+        <div class="offcanvas-body p-0">
+
+            <nav class="menu-lateral">
+
+                <a href="Dashboard.html" class="elemento-menu">
+                    <i class="bi bi-grid-1x2"></i> <span>Dashboard</span>
+                </a>
+
+                <a href="empleados.html" class="elemento-menu">
+                    <i class="bi bi-people"></i> <span>Empleados</span>
+                </a>
+
+                <a href="capacitaciones.html" class="elemento-menu">
+                    <i class="bi bi-book"></i> <span>Capacitaciones</span>
+                </a>
+
+                <a href="inspecciones.html" class="elemento-menu activo">
+                    <i class="bi bi-clipboard-check"></i> <span>Inspecciones</span>
+                </a>
+
+                <a href="incidentes.html" class="elemento-menu">
+                    <i class="bi bi-exclamation-triangle"></i> <span>Incidentes y Accidentes</span>
+                </a>
+
+                <a href="epp.html" class="elemento-menu">
+                    <i class="bi bi-briefcase"></i> <span>EPP</span>
+                </a>
+
+                <a href="riesgos.html" class="elemento-menu">
+                    <i class="bi bi-shield-exclamation"></i> <span>Riesgos</span>
+                </a>
+
+                <a href="documentos.html" class="elemento-menu">
+                    <i class="bi bi-folder"></i> <span>Documentos</span>
+                </a>
+
+                <a href="alertas.html" class="elemento-menu">
+                    <i class="bi bi-bell"></i> <span>Alertas</span>
+                </a>
+
+                <a href="reportes.html" class="elemento-menu">
+                    <i class="bi bi-bar-chart"></i> <span>Reportes</span>
+                </a>
+
+                <a href="configuracion.html" class="elemento-menu">
+                    <i class="bi bi-gear"></i> <span>Configuración</span>
+                </a>
+
+            </nav>
+
+        </div>
+
+    </div>
+
+
+    <main class="contenido-principal">
+
+        <header class="barra-superior">
+
+            <!-- Izquierda: botón de menú + título (móvil) / buscador (escritorio) -->
+            <div class="izquierda-superior">
+
+                <button class="boton-menu-movil d-md-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#menuMovil" aria-controls="menuMovil" aria-label="Abrir menú">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <span class="titulo-movil d-md-none">Inspecciones</span>
+
+                <div class="buscador-superior d-none d-md-flex">
+
+                    <i class="bi bi-search"></i>
+
+                    <input type="text" placeholder="Buscar...">
+
+                </div>
+
+            </div>
+
+
+            <div class="parte-derecha">
+
+                <div class="dropdown">
+
+                    <button class="boton-notificaciones" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" title="Notificaciones">
+
+                        <i class="bi bi-bell"></i>
+
+                        <span class="numero-notificacion">1</span>
+
+                    </button>
+
+                    <div class="dropdown-menu dropdown-menu-end panel-notificaciones">
+
+                        <div class="encabezado-notificaciones">
+
+                            <div>
+                                <strong>Notificaciones</strong>
+                                <small>Tienes 1 notificación</small>
+                            </div>
+
+                            <span class="cantidad-notificaciones">1</span>
+
+                        </div>
+
+                        <div class="notificacion">
+
+                            <div class="icono-notificacion">
+                                <i class="bi bi-exclamation-triangle"></i>
+                            </div>
+
+                            <div class="texto-notificacion">
+                                <strong>Inspección pendiente</strong>
+                                <p>La inspección de Arnés y Líneas de Vida está pendiente.</p>
+                                <small>Hace 2 horas</small>
+                            </div>
+
+                        </div>
+
+                        <div class="pie-notificaciones">
+                            <a href="#">Ver todas las notificaciones</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dropdown">
+
+                    <button class="usuario" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                        <div class="avatar">SG</div>
+
+                        <div class="informacion-usuario">
+                            <strong>SegurApp</strong>
+                            <small>Administrador</small>
+                        </div>
+
+                        <i class="bi bi-chevron-down flecha"></i>
+
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-menu-end menu-usuario">
+
+                        <li>
+                            <a href="#" class="dropdown-item">
+                                <i class="bi bi-person"></i>
+                                Mi perfil
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="dropdown-item">
+                                <i class="bi bi-gear"></i>
+                                Configuración
+                            </a>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a href="#" class="dropdown-item cerrar-sesion" data-bs-toggle="modal"
+                                data-bs-target="#modalCerrarSesion">
+                                <i class="bi bi-box-arrow-right"></i>
+                                Cerrar sesión
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section class="encabezado-pagina">
+
+            <div>
+
+                <h1>Inspecciones de Seguridad</h1>
+
+                <p>Monitoreo, control y auditoría de condiciones de trabajo seguras.</p>
+
+            </div>
+
+            <div class="indicadores">
+
+                <div class="indicador">
+                    <span>CUMPLIMIENTO</span>
+                    <strong class="texto-verde">82.5%</strong>
+                </div>
+
+                <div class="indicador">
+                    <span>TOTAL MES</span>
+                    <strong id="totalMes">6</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="tarjeta-inspecciones">
+
+            <div class="cabecera-tarjeta">
+
+                <div class="informacion-registro">
+
+                    <h2>Registro de Inspecciones</h2>
+
+                    <p id="textoRegistros">6 inspecciones encontradas</p>
+
+                </div>
+
+                <div class="controles">
+
+                    <div class="buscador-inspecciones">
+
+                        <i class="bi bi-search"></i>
+
+                        <input type="text" id="buscarInspeccion" placeholder="Buscar inspección...">
+
+                    </div>
+
+                    <select id="filtroEstado" class="filtro-estado">
+                        <option value="todos">Todos los estados</option>
+                        <option value="cumple">Cumple</option>
+                        <option value="no-cumple">No Cumple</option>
+                        <option value="pendiente">Pendiente</option>
+                        <option value="en-proceso">En Proceso</option>
+                    </select>
+
+                    <button type="button" class="boton-nueva" data-bs-toggle="modal"
+                        data-bs-target="#modalNuevaInspeccion">
+                        <i class="bi bi-plus"></i>
+                        Nueva inspección
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="table tabla-inspecciones">
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>INSPECCIÓN / DETALLE</th>
+                            <th>TIPO</th>
+                            <th>FECHA</th>
+                            <th>INSPECTOR</th>
+                            <th>RESULTADO</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="cuerpoTabla">
+
+                        <tr>
+                            <td class="id-inspeccion">INS-06</td>
+                            <td>
+                                <strong>Inspección de Extintores - Bloque A</strong>
+                                <small>SST-Inspecciones</small>
+                            </td>
+                            <td>Extintores</td>
+                            <td>24 Oct 2023</td>
+                            <td>Carlos Rodríguez</td>
+                            <td>
+                                <span class="estado cumple"><span></span> Cumple</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="id-inspeccion">INS-05</td>
+                            <td>
+                                <strong>Uso de EPP - Personal de Planta</strong>
+                                <small>SST-Inspecciones</small>
+                            </td>
+                            <td>EPP</td>
+                            <td>23 Oct 2023</td>
+                            <td>María López</td>
+                            <td>
+                                <span class="estado no-cumple"><span></span> No Cumple</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="id-inspeccion">INS-04</td>
+                            <td>
+                                <strong>Herramientas Eléctricas Portátiles</strong>
+                                <small>SST-Inspecciones</small>
+                            </td>
+                            <td>Equipos</td>
+                            <td>22 Oct 2023</td>
+                            <td>Juan Pérez</td>
+                            <td>
+                                <span class="estado cumple"><span></span> Cumple</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="id-inspeccion">INS-03</td>
+                            <td>
+                                <strong>Inspección de Arnés y Líneas de Vida</strong>
+                                <small>SST-Inspecciones</small>
+                            </td>
+                            <td>Alturas</td>
+                            <td>20 Oct 2023</td>
+                            <td>María López</td>
+                            <td>
+                                <span class="estado pendiente"><span></span> Pendiente</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="id-inspeccion">INS-02</td>
+                            <td>
+                                <strong>Botiquines y Estaciones de Emergencia</strong>
+                                <small>SST-Inspecciones</small>
+                            </td>
+                            <td>Botiquines</td>
+                            <td>18 Oct 2023</td>
+                            <td>Ana Gómez</td>
+                            <td>
+                                <span class="estado cumple"><span></span> Cumple</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="id-inspeccion">INS-01</td>
+                            <td>
+                                <strong>Orden y Limpieza - Almacén Central</strong>
+                                <small>SST-Inspecciones</small>
+                            </td>
+                            <td>Orden y Limpieza</td>
+                            <td>15 Oct 2023</td>
+                            <td>Carlos Rodríguez</td>
+                            <td>
+                                <span class="estado en-proceso"><span></span> En Proceso</span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div class="pie-tabla">
+
+                <span id="contadorRegistros">Mostrando 1 a 6 de 6 registros</span>
+
+                <div class="paginacion">
+
+                    <button type="button" disabled>
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+
+                    <button type="button" class="pagina-actual">1</button>
+
+                    <button type="button" disabled>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <div class="modal fade" id="modalNuevaInspeccion" tabindex="-1" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">Nueva inspección</h5>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="mb-3">
+                        <label for="nombreInspeccion" class="form-label">Inspección / detalle</label>
+                        <input type="text" id="nombreInspeccion" class="form-control"
+                            placeholder="Ej. Inspección de extintores">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="tipoInspeccion" class="form-label">Tipo</label>
+                        <select id="tipoInspeccion" class="form-select">
+                            <option value="">Seleccionar tipo</option>
+                            <option value="Extintores">Extintores</option>
+                            <option value="EPP">EPP</option>
+                            <option value="Equipos">Equipos</option>
+                            <option value="Alturas">Alturas</option>
+                            <option value="Botiquines">Botiquines</option>
+                            <option value="Orden y Limpieza">Orden y Limpieza</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="fechaInspeccion" class="form-label">Fecha</label>
+                        <input type="date" id="fechaInspeccion" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inspectorInspeccion" class="form-label">Inspector</label>
+                        <select id="inspectorInspeccion" class="form-select">
+                            <option value="">Seleccionar inspector</option>
+                            <option value="Carlos Rodríguez">Carlos Rodríguez</option>
+                            <option value="María López">María López</option>
+                            <option value="Juan Pérez">Juan Pérez</option>
+                            <option value="Ana Gómez">Ana Gómez</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="resultadoInspeccion" class="form-label">Resultado</label>
+                        <select id="resultadoInspeccion" class="form-select">
+                            <option value="">Seleccionar resultado</option>
+                            <option value="cumple">Cumple</option>
+                            <option value="no-cumple">No Cumple</option>
+                            <option value="pendiente">Pendiente</option>
+                            <option value="en-proceso">En Proceso</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Cancelar
+                    </button>
+
+                    <button type="button" id="guardarInspeccion" class="btn btn-primary">
+                        Guardar inspección
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="modal fade" id="modalCerrarSesion" tabindex="-1" aria-labelledby="tituloCerrarSesion"
+        aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content modal-confirmacion">
+
+                <div class="modal-header">
+
+                    <div class="icono-cerrar-sesion">
+                        <i class="bi bi-box-arrow-right"></i>
+                    </div>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+
+                </div>
+
+                <div class="modal-body text-center">
+
+                    <h5 id="tituloCerrarSesion">¿Cerrar sesión?</h5>
+
+                    <p>¿Estás seguro de que deseas cerrar tu sesión?</p>
+
+                </div>
+
+                <div class="modal-footer justify-content-center">
+
+                    <button type="button" class="btn btn-secondary boton-cancelar" data-bs-dismiss="modal">
+                        No, permanecer
+                    </button>
+
+                    <a href="index.html" class="btn boton-confirmar">
+                        Sí, cerrar sesión
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+
+        const buscador = document.getElementById("buscarInspeccion");
+        const filtroEstado = document.getElementById("filtroEstado");
+        const cuerpoTabla = document.getElementById("cuerpoTabla");
+        const textoRegistros = document.getElementById("textoRegistros");
+        const contadorRegistros = document.getElementById("contadorRegistros");
+        const totalMes = document.getElementById("totalMes");
+
+
+        function filtrarInspecciones() {
+
+            const texto = buscador.value.toLowerCase().trim();
+            const estado = filtroEstado.value;
+            const filas = cuerpoTabla.querySelectorAll("tr");
+
+            let visibles = 0;
+
+            filas.forEach(function (fila) {
+
+                const contenido = fila.textContent.toLowerCase();
+                const elementoEstado = fila.querySelector(".estado");
+
+                let coincideTexto = contenido.includes(texto);
+                let coincideEstado = true;
+
+                if (estado !== "todos") {
+                    coincideEstado = elementoEstado.classList.contains(estado);
+                }
+
+                if (coincideTexto && coincideEstado) {
+                    fila.style.display = "";
+                    visibles++;
+                } else {
+                    fila.style.display = "none";
+                }
+
+            });
+
+            textoRegistros.textContent = visibles + " inspecciones encontradas";
+
+            contadorRegistros.textContent =
+                "Mostrando " + visibles + " de " + filas.length + " registros";
+
+        }
+
+
+        buscador.addEventListener("input", filtrarInspecciones);
+        filtroEstado.addEventListener("change", filtrarInspecciones);
+
+
+        const botonGuardar = document.getElementById("guardarInspeccion");
+
+        botonGuardar.addEventListener("click", guardarInspeccion);
+
+
+        function guardarInspeccion() {
+
+            const nombre = document.getElementById("nombreInspeccion").value.trim();
+            const tipo = document.getElementById("tipoInspeccion").value;
+            const fecha = document.getElementById("fechaInspeccion").value;
+            const inspector = document.getElementById("inspectorInspeccion").value;
+            const resultado = document.getElementById("resultadoInspeccion").value;
+
+            if (
+                nombre === "" ||
+                tipo === "" ||
+                fecha === "" ||
+                inspector === "" ||
+                resultado === ""
+            ) {
+
+                alert("Por favor completa todos los campos.");
+
+                return;
+
+            }
+
+
+            const cantidad = cuerpoTabla.querySelectorAll("tr").length + 1;
+
+            const id = "INS-" + String(cantidad).padStart(2, "0");
+
+            const fechaObjeto = new Date(fecha + "T00:00:00");
+
+            const fechaFormateada = fechaObjeto.toLocaleDateString(
+                "es-ES",
+                {
+                    day: "2-digit",
+                    month: "short",
+                    year: "numeric"
+                }
+            );
+
+            let textoResultado;
+
+            if (resultado === "cumple") {
+                textoResultado = "Cumple";
+            }
+            else if (resultado === "no-cumple") {
+                textoResultado = "No Cumple";
+            }
+            else if (resultado === "pendiente") {
+                textoResultado = "Pendiente";
+            }
+            else {
+                textoResultado = "En Proceso";
+            }
+
+            const fila = document.createElement("tr");
+
+            fila.innerHTML = `
+
+                <td class="id-inspeccion">
+                    ${id}
+                </td>
+
+                <td>
+
+                    <strong>
+                        ${nombre}
+                    </strong>
+
+                    <small>
+                        SST-Inspecciones
+                    </small>
+
+                </td>
+
+                <td>
+                    ${tipo}
+                </td>
+
+                <td>
+                    ${fechaFormateada}
+                </td>
+
+                <td>
+                    ${inspector}
+                </td>
+
+                <td>
+
+                    <span class="estado ${resultado}">
+
+                        <span></span>
+
+                        ${textoResultado}
+
+                    </span>
+
+                </td>
+
+            `;
+
+            cuerpoTabla.appendChild(fila);
+
+            const total = cuerpoTabla.querySelectorAll("tr").length;
+
+            totalMes.textContent = total;
+
+            textoRegistros.textContent = total + " inspecciones encontradas";
+
+            contadorRegistros.textContent =
+                "Mostrando 1 a " + total + " de " + total + " registros";
+
+            document.getElementById("nombreInspeccion").value = "";
+            document.getElementById("tipoInspeccion").value = "";
+            document.getElementById("fechaInspeccion").value = "";
+            document.getElementById("inspectorInspeccion").value = "";
+            document.getElementById("resultadoInspeccion").value = "";
+
+            const modal = bootstrap.Modal.getInstance(
+                document.getElementById("modalNuevaInspeccion")
+            );
+
+            modal.hide();
+
+        }
+
+    </script>
+
+</body>
+
+</html>
