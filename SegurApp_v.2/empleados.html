@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SegurApp - Empleados</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/empleados.css">
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <aside class="col-md-3 col-lg-2 bg-dark text-white min-vh-100 p-3">
+
+                <div class="text-center mb-4">
+
+                    <img
+                        src="IMGS/logoSegurApp.png"
+                        alt="Logo SegurApp"
+                        class="img-fluid mb-2"
+                        style="max-width: 100px;"
+                    >
+
+                </div>
+
+
+                <nav class="nav flex-column">
+
+                    <a href="Dashboard.html" class="nav-link text-white">
+                        <i class="bi bi-grid-1x2-fill me-2"></i>
+                        Dashboard
+                    </a>
+
+                    <a href="empleados.html" class="nav-link active bg-warning text-dark rounded">
+                        <i class="bi bi-people me-2"></i>
+                        Empleados
+                    </a>
+
+                    <a href="capacitaciones.html" class="nav-link text-white">
+                        <i class="bi bi-book me-2"></i>
+                        Capacitaciones
+                    </a>
+
+                    <a href="inspecciones.html" class="nav-link text-white">
+                        <i class="bi bi-clipboard-check me-2"></i>
+                        Inspecciones
+                    </a>
+
+                    <a href="#" class="nav-link text-white">
+                        <i class="bi bi-exclamation-triangle me-2"></i>
+                        Incidentes y Accidentes
+                    </a>
+
+                    <a href="#" class="nav-link text-white">
+                        <i class="bi bi-person-badge me-2"></i>
+                        EPP
+                    </a>
+
+                    <a href="#" class="nav-link text-white">
+                        <i class="bi bi-shield-exclamation me-2"></i>
+                        Riesgos
+                    </a>
+
+                    <a href="#" class="nav-link text-white">
+                        <i class="bi bi-folder me-2"></i>
+                        Documentos
+                    </a>
+
+                    <a href="#" class="nav-link text-white">
+                        <i class="bi bi-bell me-2"></i>
+                        Alertas
+                    </a>
+
+                    <a href="#" class="nav-link text-white">
+                        <i class="bi bi-bar-chart me-2"></i>
+                        Reportes
+                    </a>
+
+                    <a href="#" class="nav-link text-white">
+                        <i class="bi bi-gear me-2"></i>
+                        Configuración
+                    </a>
+
+                </nav>
+
+            </aside>
+
+
+            <main class="col-md-9 col-lg-10 bg-light min-vh-100 p-0">
+
+
+                <nav class="navbar navbar-expand-lg bg-white border-bottom px-4">
+
+                    <div class="container-fluid">
+
+                        <div class="d-flex align-items-center gap-2">
+
+                            <button
+                                class="boton-menu-movil"
+                                type="button"
+                                data-bs-toggle="offcanvas"
+                                data-bs-target="#menuMovil"
+                                aria-label="Abrir menú"
+                            >
+                                <i class="bi bi-list"></i>
+                            </button>
+
+                            <div>
+
+                                <h5 class="mb-0">
+                                    Empleados
+                                </h5>
+
+                                <small class="text-muted">
+                                    Gestión y consulta del personal de la organización.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="d-flex align-items-center gap-3">
+
+                            <form class="d-flex">
+
+                                <input
+                                    class="form-control form-control-sm"
+                                    type="search"
+                                    placeholder="Buscar empleado..."
+                                >
+
+                            </form>
+
+
+                            <button class="btn btn-light position-relative">
+
+                                <i class="bi bi-bell"></i>
+
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    1
+                                </span>
+
+                            </button>
+
+
+                            <div class="dropdown">
+
+                                <button
+                                    class="btn btn-light dropdown-toggle d-flex align-items-center gap-2"
+                                    type="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+
+                                    <span
+                                        class="rounded-circle bg-warning text-dark fw-bold d-flex align-items-center justify-content-center"
+                                        style="width: 40px; height: 40px;"
+                                    >
+                                        SG
+                                    </span>
+
+
+                                    <span class="text-start">
+
+                                        <strong class="d-block">
+                                            SegurApp
+                                        </strong>
+
+                                        <small class="text-muted">
+                                            Administrador
+                                        </small>
+
+                                    </span>
+
+                                </button>
+
+
+                                <ul class="dropdown-menu dropdown-menu-end shadow">
+
+                                    <li>
+
+                                        <a
+                                            class="dropdown-item d-flex align-items-center gap-3 py-3"
+                                            href="#"
+                                        >
+
+                                            <i class="bi bi-person fs-4"></i>
+
+                                            <span>
+
+                                                <strong class="d-block">
+                                                    Mi perfil
+                                                </strong>
+
+                                            </span>
+
+                                        </a>
+
+                                    </li>
+
+
+                                    <li>
+
+                                        <a
+                                            class="dropdown-item d-flex align-items-center gap-3 py-3"
+                                            href="#"
+                                        >
+
+                                            <i class="bi bi-gear fs-4"></i>
+
+                                            <span>
+
+                                                <strong class="d-block">
+                                                    Configuración
+                                                </strong>
+
+                                            </span>
+
+                                        </a>
+
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </nav>
+
+
+                <section class="container-fluid p-4">
+
+
+                    <div class="mb-4">
+
+                        <h1 class="fw-bold mb-1">
+                            Empleados
+                        </h1>
+
+                        <p class="text-muted mb-0">
+                            Gestión y consulta del personal de la organización.
+                        </p>
+
+                    </div>
+
+
+                    <div class="row g-4 mb-4">
+
+
+                        <div class="col-md-4">
+
+                            <div class="card shadow-sm h-100">
+
+                                <div class="card-body">
+
+                                    <div class="d-flex align-items-center gap-3">
+
+                                        <div class="bg-light rounded p-3">
+
+                                            <i class="bi bi-people fs-4"></i>
+
+                                        </div>
+
+                                        <div>
+
+                                            <p class="text-muted mb-1">
+                                                Empleados activos
+                                            </p>
+
+                                            <h2 class="mb-0">
+                                                28
+                                            </h2>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-4">
+
+                            <div class="card shadow-sm h-100">
+
+                                <div class="card-body">
+
+                                    <div class="d-flex align-items-center gap-3">
+
+                                        <div class="bg-primary-subtle rounded p-3">
+
+                                            <i class="bi bi-person fs-4"></i>
+
+                                        </div>
+
+                                        <div>
+
+                                            <p class="text-muted mb-1">
+                                                Hombres
+                                            </p>
+
+                                            <h2 class="mb-0">
+                                                24
+                                            </h2>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-4">
+
+                            <div class="card shadow-sm h-100">
+
+                                <div class="card-body">
+
+                                    <div class="d-flex align-items-center gap-3">
+
+                                        <div class="bg-danger-subtle rounded p-3">
+
+                                            <i class="bi bi-person fs-4"></i>
+
+                                        </div>
+
+                                        <div>
+
+                                            <p class="text-muted mb-1">
+                                                Mujeres
+                                            </p>
+
+                                            <h2 class="mb-0">
+                                                4
+                                            </h2>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="card shadow-sm">
+
+
+                        <div class="card-header bg-white p-4">
+
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+
+                                <div>
+
+                                    <h4 class="mb-1">
+                                        Empleados
+                                    </h4>
+
+                                    <p class="text-muted mb-0">
+                                        4 registros encontrados
+                                    </p>
+
+                                </div>
+
+
+                                <div class="d-flex gap-2 flex-wrap">
+
+                                    <input
+                                        type="search"
+                                        class="form-control"
+                                        placeholder="Buscar empleado..."
+                                    >
+
+
+                                    <select class="form-select">
+
+                                        <option selected>
+                                            Todas las áreas
+                                        </option>
+
+                                        <option>
+                                            Administración
+                                        </option>
+
+                                        <option>
+                                            Operaciones
+                                        </option>
+
+                                        <option>
+                                            Recursos Humanos
+                                        </option>
+
+                                    </select>
+
+
+                                    <select class="form-select">
+
+                                        <option selected>
+                                            Todos los estados
+                                        </option>
+
+                                        <option>
+                                            Activo
+                                        </option>
+
+                                        <option>
+                                            Inactivo
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="table-responsive">
+
+                            <table class="table table-hover align-middle mb-0">
+
+                                <thead class="table-light">
+
+                                    <tr>
+
+                                        <th>EMPLEADO</th>
+
+                                        <th>DOCUMENTO</th>
+
+                                        <th>CARGO</th>
+
+                                        <th>ÁREA</th>
+
+                                        <th>ESTADO</th>
+
+                                        <th>ACCIONES</th>
+
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody>
+
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="d-flex align-items-center gap-2">
+
+                                                <div class="bg-secondary-subtle rounded-circle p-2 fw-bold">
+                                                    JP
+                                                </div>
+
+                                                <div>
+
+                                                    <strong class="d-block">
+                                                        Juan Pérez
+                                                    </strong>
+
+                                                    <small class="text-muted">
+                                                        juan.perez@segurapp.com
+                                                    </small>
+
+                                                </div>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+                                            1.001.234.567
+                                        </td>
+
+                                        <td>
+                                            Analista SST
+                                        </td>
+
+                                        <td>
+
+                                            <span class="badge text-bg-primary">
+                                                Operaciones
+                                            </span>
+
+                                        </td>
+
+                                        <td>
+
+                                            <span class="badge text-bg-success">
+                                                Activo
+                                            </span>
+
+                                        </td>
+
+                                        <td>
+
+                                            <div class="dropdown">
+
+                                                <button
+                                                    class="btn btn-sm btn-light"
+                                                    type="button"
+                                                    data-bs-toggle="dropdown"
+                                                >
+                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+
+
+                                                <ul class="dropdown-menu">
+
+                                                    <li>
+
+                                                        <a class="dropdown-item" href="#">
+                                                            Ver empleado
+                                                        </a>
+
+                                                    </li>
+
+                                                    <li>
+
+                                                        <a class="dropdown-item" href="#">
+                                                            Editar empleado
+                                                        </a>
+
+                                                    </li>
+
+                                                    <li>
+
+                                                        <hr class="dropdown-divider">
+
+                                                    </li>
+
+                                                    <li>
+
+                                                        <a
+                                                            class="dropdown-item text-danger"
+                                                            href="#"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#modalDesactivarJuan"
+                                                        >
+                                                            Desactivar empleado
+                                                        </a>
+
+                                                    </li>
+
+                                                </ul>
+
+                                            </div>
+
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="d-flex align-items-center gap-2">
+
+                                                <div class="bg-secondary-subtle rounded-circle p-2 fw-bold">
+                                                    ML
+                                                </div>
+
+                                                <div>
+
+                                                    <strong class="d-block">
+                                                        María López
+                                                    </strong>
+
+                                                    <small class="text-muted">
+                                                        maria.lopez@segurapp.com
+                                                    </small>
+
+                                                </div>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+                                            1.023.456.789
+                                        </td>
+
+                                        <td>
+                                            Coordinadora SST
+                                        </td>
+
+                                        <td>
+
+                                            <span class="badge text-bg-primary">
+                                                Administración
+                                            </span>
+
+                                        </td>
+
+                                        <td>
+
+                                            <span class="badge text-bg-success">
+                                                Activo
+                                            </span>
+
+                                        </td>
+
+                                        <td>
+
+                                            <div class="dropdown">
+
+                                                <button
+                                                    class="btn btn-sm btn-light"
+                                                    type="button"
+                                                    data-bs-toggle="dropdown"
+                                                >
+                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+
+
+                                                <ul class="dropdown-menu">
+
+                                                    <li>
+
+                                                        <a class="dropdown-item" href="#">
+                                                            Ver empleado
+                                                        </a>
+
+                                                    </li>
+
+                                                    <li>
+
+                                                        <a class="dropdown-item" href="#">
+                                                            Editar empleado
+                                                        </a>
+
+                                                    </li>
+
+                                                    <li>
+
+                                                        <hr class="dropdown-divider">
+
+                                                    </li>
+
+                                                    <li>
+
+                                                        <a
+                                                            class="dropdown-item text-danger"
+                                                            href="#"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#modalDesactivarMaria"
+                                                        >
+                                                            Desactivar empleado
+                                                        </a>
+
+                                                    </li>
+
+                                                </ul>
+
+                                            </div>
+
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="d-flex align-items-center gap-2">
+
+                                                <div class="bg-secondary-subtle rounded-circle p-2 fw-bold">
+                                                    CR
+                                                </div>
+
+                                                <div>
+
+                                                    <strong class="d-block">
+                                                        Carlos Rodríguez
+                                                    </strong>
+
+                                                    <small class="text-muted">
+                                                        carlos.rodriguez@segurapp.com
+                                                    </small>
+
+                                                </div>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+                                            1.098.765.432
+                                        </td>
+
+                                        <td>
+                                            Supervisor
+                                        </td>
+
+                                        <td>
+
+                                            <span class="badge text-bg-primary">
+                                                Operaciones
+                                            </span>
+
+                                        </td>
+
+                                        <td>
+
+                                            <span class="badge text-bg-success">
+                                                Activo
+                                            </span>
+
+                                        </td>
+
+                                        <td>
+
+                                            <div class="dropdown">
+
+                                                <button
+                                                    class="btn btn-sm btn-light"
+                                                    type="button"
+                                                    data-bs-toggle="dropdown"
+                                                >
+                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+
+
+                                                <ul class="dropdown-menu">
+
+                                                    <li>
+
+                                                        <a class="dropdown-item" href="#">
+                                                            Ver empleado
+                                                        </a>
+
+                                                    </li>
+
+                                                    <li>
+
+                                                        <a class="dropdown-item" href="#">
+                                                            Editar empleado
+                                                        </a>
+
+                                                    </li>
+
+                                                    <li>
+
+                                                        <hr class="dropdown-divider">
+
+                                                    </li>
+
+                                                    <li>
+
+                                                        <a
+                                                            class="dropdown-item text-danger"
+                                                            href="#"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#modalDesactivarCarlos"
+                                                        >
+                                                            Desactivar empleado
+                                                        </a>
+
+                                                    </li>
+
+                                                </ul>
+
+                                            </div>
+
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="d-flex align-items-center gap-2">
+
+                                                <div class="bg-secondary-subtle rounded-circle p-2 fw-bold">
+                                                    AG
+                                                </div>
+
+                                                <div>
+
+                                                    <strong class="d-block">
+                                                        Ana Gómez
+                                                    </strong>
+
+                                                    <small class="text-muted">
+                                                        ana.gomez@segurapp.com
+                                                    </small>
+
+                                                </div>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+                                            1.076.543.210
+                                        </td>
+
+                                        <td>
+                                            Profesional SST
+                                        </td>
+
+                                        <td>
+
+                                            <span class="badge text-bg-primary">
+                                                Recursos Humanos
+                                            </span>
+
+                                        </td>
+
+                                        <td>
+
+                                            <span class="badge text-bg-success">
+                                                Activo
+                                            </span>
+
+                                        </td>
+
+                                        <td>
+
+                                            <div class="dropdown">
+
+                                                <button
+                                                    class="btn btn-sm btn-light"
+                                                    type="button"
+                                                    data-bs-toggle="dropdown"
+                                                >
+                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+
+
+                                                <ul class="dropdown-menu">
+
+                                                    <li>
+
+                                                        <a class="dropdown-item" href="#">
+                                                            Ver empleado
+                                                        </a>
+
+                                                    </li>
+
+                                                    <li>
+
+                                                        <a class="dropdown-item" href="#">
+                                                            Editar empleado
+                                                        </a>
+
+                                                    </li>
+
+                                                    <li>
+
+                                                        <hr class="dropdown-divider">
+
+                                                    </li>
+
+                                                    <li>
+
+                                                        <a
+                                                            class="dropdown-item text-danger"
+                                                            href="#"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#modalDesactivarAna"
+                                                        >
+                                                            Desactivar empleado
+                                                        </a>
+
+                                                    </li>
+
+                                                </ul>
+
+                                            </div>
+
+                                        </td>
+
+                                    </tr>
+
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+
+                        <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+
+                            <small class="text-muted">
+                                Mostrando 1 a 4 de 4 empleados
+                            </small>
+
+
+                            <nav>
+
+                                <ul class="pagination pagination-sm mb-0">
+
+                                    <li class="page-item active">
+
+                                        <a class="page-link" href="#">
+                                            1
+                                        </a>
+
+                                    </li>
+
+                                </ul>
+
+                            </nav>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <div class="offcanvas offcanvas-start menu-movil" tabindex="-1" id="menuMovil">
+
+        <div class="offcanvas-header">
+
+            <img src="IMGS/logoSegurApp.png" class="logo-movil" alt="Logo SegurApp">
+
+            <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Cerrar"
+            ></button>
+
+        </div>
+
+
+        <div class="offcanvas-body p-0">
+
+            <nav class="menu-lateral">
+
+                <a href="Dashboard.html" class="elemento-menu">
+                    <i class="bi bi-grid-1x2-fill"></i> Dashboard
+                </a>
+
+                <a href="empleados.html" class="elemento-menu activo">
+                    <i class="bi bi-people"></i> Empleados
+                </a>
+
+                <a href="capacitaciones.html" class="elemento-menu">
+                    <i class="bi bi-book"></i> Capacitaciones
+                </a>
+
+                <a href="inspecciones.html" class="elemento-menu">
+                    <i class="bi bi-clipboard-check"></i> Inspecciones
+                </a>
+
+                <a href="#" class="elemento-menu">
+                    <i class="bi bi-exclamation-triangle"></i> Incidentes y Accidentes
+                </a>
+
+                <a href="#" class="elemento-menu">
+                    <i class="bi bi-person-badge"></i> EPP
+                </a>
+
+                <a href="#" class="elemento-menu">
+                    <i class="bi bi-shield-exclamation"></i> Riesgos
+                </a>
+
+                <a href="#" class="elemento-menu">
+                    <i class="bi bi-folder"></i> Documentos
+                </a>
+
+                <a href="#" class="elemento-menu">
+                    <i class="bi bi-bell"></i> Alertas
+                </a>
+
+                <a href="#" class="elemento-menu">
+                    <i class="bi bi-bar-chart"></i> Reportes
+                </a>
+
+                <a href="#" class="elemento-menu">
+                    <i class="bi bi-gear"></i> Configuración
+                </a>
+
+            </nav>
+
+        </div>
+
+    </div>
+
+
+    <div class="modal fade" id="modalDesactivarJuan" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Desactivar empleado
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                    ></button>
+
+                </div>
+
+
+                <div class="modal-body">
+
+                    ¿Está seguro de que desea desactivar a
+                    <strong>Juan Pérez</strong>?
+
+                </div>
+
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                    >
+                        Cancelar
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-danger"
+                    >
+                        Desactivar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="modal fade" id="modalDesactivarMaria" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Desactivar empleado
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                    ></button>
+
+                </div>
+
+
+                <div class="modal-body">
+
+                    ¿Está seguro de que desea desactivar a
+                    <strong>María López</strong>?
+
+                </div>
+
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                    >
+                        Cancelar
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-danger"
+                    >
+                        Desactivar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="modal fade" id="modalDesactivarCarlos" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Desactivar empleado
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                    ></button>
+
+                </div>
+
+
+                <div class="modal-body">
+
+                    ¿Está seguro de que desea desactivar a
+                    <strong>Carlos Rodríguez</strong>?
+
+                </div>
+
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                    >
+                        Cancelar
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-danger"
+                    >
+                        Desactivar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="modal fade" id="modalDesactivarAna" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Desactivar empleado
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                    ></button>
+
+                </div>
+
+
+                <div class="modal-body">
+
+                    ¿Está seguro de que desea desactivar a
+                    <strong>Ana Gómez</strong>?
+
+                </div>
+
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                    >
+                        Cancelar
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-danger"
+                    >
+                        Desactivar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
